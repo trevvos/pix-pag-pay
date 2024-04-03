@@ -1,13 +1,12 @@
+import { ThemeProvider } from 'styled-components'
 import './App.css'
+import { defaultTheme } from './styles/themes/default'
+import { GlobalStyle } from './styles/global'
 
-function App() {
+export function App() {
   return (
-    <>
-      <div>
-        <h1>Pix Pag Pay</h1>
-      </div>
-    </>
+    <ThemeProvider theme={defaultTheme}>
+      <GlobalStyle />
+    </ThemeProvider>
   )
 }
-
-export default App
